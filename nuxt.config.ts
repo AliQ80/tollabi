@@ -1,7 +1,5 @@
-// import { defineNuxtConfig } from 'nuxt'
-
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-export default defineNuxtConfig({
+export default {
   typescript: {
     shim: false,
   },
@@ -52,10 +50,10 @@ export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
-    '@formkit/nuxt',
-    '@nuxtjs/supabase',
-    'nuxt-icons',
     '@nuxtjs/color-mode',
+    '@nuxtjs/supabase',
+    '@formkit/nuxt',
+    'nuxt-icons',
   ],
   colorMode: {
     preference: 'dark', // default value of $colorMode.preference
@@ -78,4 +76,4 @@ export default defineNuxtConfig({
   //     reactivityTransform: true,
   //   },
   // },
-})
+}

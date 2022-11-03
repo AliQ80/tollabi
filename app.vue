@@ -5,12 +5,6 @@
   definePageMeta({
     colorMode: 'dark',
   })
-
-  // type Theme = 'light' | 'dark'
-
-  // const setColorTheme = (newTheme: Theme) => {
-  //   useColorMode().preference = newTheme
-  // }
 </script>
 
 <template>

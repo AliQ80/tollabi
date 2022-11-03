@@ -1,15 +1,17 @@
-# Nuxt 3 Starter
+<h2 align="center">
+📚 Tollabi
+</h2>
+
+<pre align="center">
+🧪 Work in Progress
+</pre>
 
 ---
 
-- Nuxt 3
-- firebase
-- Tailwind 3
-- DaisyUI
-- FormKit
-- pinia
-- lint & prettier
-- husky & commitlint
+## App Features
+
+- 👱 Profile Management
+- 🗒️ Private Notes
 
 ---
 

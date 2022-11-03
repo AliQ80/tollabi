@@ -1,13 +1,13 @@
 {
   "private": true,
-  "name": "nuxt_starter",
-  "description": "Nuxt 3 starter template with tailwindcss and supabase",
-  "version": "0.9.1",
+  "name": "tollabi",
+  "description": "Student grading and performance follow up",
+  "version": "0.1.0",
   "author": "Ali Karam <ak@alikaram.com> (https://alikaram.com/)",
-  "url": "https://nuxt-starter-eta.vercel.app/",
+  "url": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AliQ80/nuxt-starter.git"
+    "url": "https://github.com/AliQ80/tollabi.git"
   },
   "scripts": {
     "build": "nuxi build",

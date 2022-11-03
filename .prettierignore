@@ -3,20 +3,9 @@
 .nitro
 .output
 
-# Created by https://www.toptal.com/developers/gitignore/api/osx,node,firebase,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/osx,node,visualstudiocode
 
-# Edit at https://www.toptal.com/developers/gitignore?templates=osx,node,firebase,visualstudiocode
-
-### Firebase
-
-.idea
-**/node_modules/\*
-**/.firebaserc
-
-### Firebase Patch
-
-.runtimeconfig.json
-.firebase/
+# Edit at https://www.toptal.com/developers/gitignore?templates=osx,node,visualstudiocode
 
 ### Node
 
