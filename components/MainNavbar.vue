@@ -43,37 +43,37 @@
     }
   }
 
-  const themes = [
-    'light',
-    'dark',
-    'cupcake',
-    'bumblebee',
-    'emerald',
-    'corporate',
-    'synthwave',
-    'retro',
-    'cyberpunk',
-    'valentine',
-    'halloween',
-    'garden',
-    'forest',
-    'aqua',
-    'lofi',
-    'pastel',
-    'fantasy',
-    'wireframe',
-    'black',
-    'luxury',
-    'dracula',
-    'cmyk',
-    'autumn',
-    'business',
-    'acid',
-    'lemonade',
-    'night',
-    'coffee',
-    'winter',
-  ]
+  // const themes = [
+  //   'light',
+  //   'dark',
+  //   'cupcake',
+  //   'bumblebee',
+  //   'emerald',
+  //   'corporate',
+  //   'synthwave',
+  //   'retro',
+  //   'cyberpunk',
+  //   'valentine',
+  //   'halloween',
+  //   'garden',
+  //   'forest',
+  //   'aqua',
+  //   'lofi',
+  //   'pastel',
+  //   'fantasy',
+  //   'wireframe',
+  //   'black',
+  //   'luxury',
+  //   'dracula',
+  //   'cmyk',
+  //   'autumn',
+  //   'business',
+  //   'acid',
+  //   'lemonade',
+  //   'night',
+  //   'coffee',
+  //   'winter',
+  // ]
   onMounted(() => {
     checkTheme()
   })
@@ -116,9 +116,9 @@
         Nuxt3 Starter
       </NuxtLink>
 
-      <select v-model="$colorMode.preference" class="select">
+      <!-- <select v-model="$colorMode.preference" class="select">
         <option v-for="theme of themes" :key="theme">{{ theme }}</option>
-      </select>
+      </select> -->
 
       <label class="swap swap-rotate mx-2">
         <!-- this hidden checkbox controls the state -->
