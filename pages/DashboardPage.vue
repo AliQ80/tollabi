@@ -1,18 +1,14 @@
 <script setup lang="ts">
   definePageMeta({
-    title: 'Tollabi | Reset Password',
-    alias: ['/resetpassword'],
+    title: 'Nuxt-starter | Dashboard',
+    alias: ['/dashboard'],
     middleware: ['auth'],
     // or middleware: 'auth'
   })
 </script>
 
 <template>
-  <div>
-    <div class="flex justify-center">
-      <FormResetPass />
-    </div>
-  </div>
+  <div></div>
 </template>
 
 <style scoped></style>

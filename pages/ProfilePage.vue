@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import EditProfile from '~~/components/form/EditProfile.vue'
   definePageMeta({
-    title: 'Nuxt-starter | profile Page',
+    title: 'Tollabi | profile Page',
     alias: ['/profile'],
     middleware: ['auth'],
     // or middleware: 'auth'

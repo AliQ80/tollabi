@@ -1,6 +1,6 @@
 <script setup lang="ts">
   definePageMeta({
-    title: 'Nuxt-starter | Restricted',
+    title: 'Tollabi | Restricted',
     alias: ['/restricted'],
   })
 </script>

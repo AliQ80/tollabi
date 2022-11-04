@@ -1,9 +1,12 @@
 <script setup lang="ts">
   import { useSupabaseUserStore } from '~~/stores/userStore'
   import { useModalStore } from '@/stores/modalStore'
+  import { useProfileStore } from '~~/stores/profileStore'
 
   const colorMode = useColorMode()
 
+  const profileStore = useProfileStore()
+  const avatar = profileStore.avatarUrl
   const userStore = useSupabaseUserStore()
   const modalStore = useModalStore()
 
@@ -107,13 +110,13 @@
           <li>
             <NuxtLink to="/contact"> Contact us </NuxtLink>
           </li>
-          <li>
+          <!-- <li>
             <NuxtLink to="/secret"> secret </NuxtLink>
-          </li>
+          </li> -->
         </ul>
       </div>
       <NuxtLink to="/" class="btn btn-ghost font-lobster text-xl normal-case">
-        Nuxt3 Starter
+        Tollabi
       </NuxtLink>
 
       <!-- <select v-model="$colorMode.preference" class="select">
@@ -156,11 +159,11 @@
             Contact us
           </NuxtLink>
         </li>
-        <li>
+        <!-- <li>
           <NuxtLink class="ml-2 underline underline-offset-8" to="/secret">
             secret
           </NuxtLink>
-        </li>
+        </li> -->
       </ul>
     </div>
 
@@ -172,8 +175,15 @@
             <label tabindex="0" class="btn btn-ghost btn-circle">
               <div class="avatar online placeholder">
                 <div
+                  v-if="!profileStore.avatarPath"
                   class="bg-neutral-focus text-neutral-content ring-primary ring-offset-base-100 w-10 rounded-full ring ring-offset-2">
-                  <span class="text-xl">AK</span>
+                  <span class="text-xl">{{ profileStore.getInitials }}</span>
+                </div>
+                <div v-else>
+                  <img
+                    class="bg-neutral-focus text-neutral-content ring-primary ring-offset-base-100 w-5 rounded-full ring ring-offset-2"
+                    :src="avatar"
+                    alt="avatar" />
                 </div>
               </div>
             </label>
