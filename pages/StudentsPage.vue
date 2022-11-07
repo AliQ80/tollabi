@@ -1,6 +1,6 @@
 <script setup lang="ts">
   definePageMeta({
-    title: 'Tollabi | Dashboard',
+    title: 'Tollabi | Students',
     alias: ['/dashboard'],
     middleware: ['auth'],
     // or middleware: 'auth'
@@ -8,11 +8,7 @@
 </script>
 
 <template>
-  <div>
-    <div class="proes">
-      <h1>Dashboard</h1>
-    </div>
-  </div>
+  <div></div>
 </template>
 
 <style scoped></style>

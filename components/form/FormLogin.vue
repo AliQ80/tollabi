@@ -44,7 +44,7 @@
     if (userStore.email && userStore.confirmed) {
       reset('login')
       emit('loginEvent', 'Login', 'success')
-      return navigateTo('/')
+      return navigateTo('/dashboard')
     }
 
     if (userStore.error !== '') {

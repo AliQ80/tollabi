@@ -11,11 +11,11 @@
       <div class="drawer-side">
         <label for="my-drawer-2" class="drawer-overlay"></label>
         <ul
-          class="menu bg-base-200 text-base-content w-auto overflow-y-auto p-4">
+          class="menu bg-base-200 text-base-content h-auto w-auto overflow-y-auto p-4">
           <!-- Sidebar content here -->
-          <li><a>📊 Dashboard</a></li>
-          <li><a>🚪 Classes</a></li>
-          <li><a>👨‍🎓 Students</a></li>
+          <li><NuxtLink to="/dashboard">📊 Dashboard</NuxtLink></li>
+          <li><NuxtLink to="/classes">🚪 Classes</NuxtLink></li>
+          <li><NuxtLink to="/students">👨‍🎓 Students</NuxtLink></li>
         </ul>
       </div>
     </div>
