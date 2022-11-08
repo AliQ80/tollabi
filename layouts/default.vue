@@ -1,9 +1,11 @@
 <template>
   <div>
-    <MainNavbar />
-    <MainSidebar>
+    <MainNavbar>
       <slot />
-    </MainSidebar>
+    </MainNavbar>
+    <!-- <MainSidebar> -->
+    <!-- <slot /> -->
+    <!-- </MainSidebar> -->
     <MainFooter />
   </div>
 </template>

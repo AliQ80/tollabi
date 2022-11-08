@@ -13,6 +13,10 @@ module.exports = {
     extend: {
       fontFamily: {
         lobster: "'Lobster', cursive",
+        roboto: "'Roboto', sans-serif",
+        pacifico: "'Pacifico', cursive",
+        carter: "'Carter One', cursive",
+        seymour: "'Seymour One', sans-serif",
       },
     },
     darkSelector: '.mode-dark',
