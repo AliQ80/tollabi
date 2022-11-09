@@ -252,6 +252,9 @@
         </div>
       </div>
     </div>
+
+    <!-- sidebar -->
+
     <div v-if="userStore.uid" class="flex">
       <div class="flex-non">
         <ul class="menu bg-base-200 box h-full w-36 p-2">
@@ -362,6 +365,9 @@
       <div class="flex-1">
         <slot />
       </div>
+    </div>
+    <div v-else>
+      <slot />
     </div>
   </div>
 </template>
