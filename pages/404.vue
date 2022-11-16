@@ -1,3 +1,9 @@
+<script setup lang="ts">
+  definePageMeta({
+    title: 'Tollabi | 404',
+  })
+</script>
+
 <template>
   <section
     class="flex h-full items-center p-16 dark:bg-gray-900 dark:text-gray-100">

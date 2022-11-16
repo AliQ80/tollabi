@@ -1,4 +1,5 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
+import { User } from '@supabase/gotrue-js'
 
 export const useSupabaseUserStore = defineStore('userSupaStore', {
   // arrow function recommended for full type inference
@@ -11,6 +12,7 @@ export const useSupabaseUserStore = defineStore('userSupaStore', {
       error: '',
       confirmed: false,
       resetPasswordSent: false,
+      user: null as User,
     }
   },
 

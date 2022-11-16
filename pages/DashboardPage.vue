@@ -1,7 +1,7 @@
 <script setup lang="ts">
   definePageMeta({
-    title: 'Tollabi | Reset Password',
-    alias: ['/resetpassword'],
+    title: 'Tollabi | Dashboard',
+    alias: ['/dashboard'],
     middleware: ['auth'],
     // or middleware: 'auth'
   })
@@ -9,8 +9,8 @@
 
 <template>
   <div>
-    <div class="flex justify-center">
-      <FormResetPass />
+    <div class="proes">
+      <h1>Dashboard</h1>
     </div>
   </div>
 </template>

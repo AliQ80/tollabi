@@ -2,7 +2,7 @@
   import { useSupabaseUserStore } from '~~/stores/userStore'
 
   definePageMeta({
-    title: 'Nuxt-starter | Settings',
+    title: 'Tollabi | Settings',
     alias: ['/settings'],
     middleware: ['auth'],
     // or middleware: 'auth'

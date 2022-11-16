@@ -1,7 +1,11 @@
 <template>
   <div>
-    <MainNavbar />
-    <slot />
+    <MainNavbar>
+      <slot />
+    </MainNavbar>
+    <!-- <MainSidebar> -->
+    <!-- <slot /> -->
+    <!-- </MainSidebar> -->
     <MainFooter />
   </div>
 </template>

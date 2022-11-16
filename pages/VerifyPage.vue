@@ -2,7 +2,7 @@
   import { useSupabaseUserStore } from '~~/stores/userStore'
 
   definePageMeta({
-    title: 'Nuxt-starter | verify',
+    title: 'Tollabi | verify',
     alias: ['/verify'],
   })
 
