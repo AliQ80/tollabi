@@ -32,21 +32,21 @@
             href="#"
             aria-label="GitHub"
             class="rounded-md p-2 dark:text-gray-100 hover:dark:text-violet-400">
-            <NuxtIcon name="SocialGithub" />
+            <nuxt-icon name="social/github" />
           </a>
           <a
             rel="noopener noreferrer"
             href="#"
             aria-label="Twitter"
             class="rounded-md p-2 dark:text-gray-100 hover:dark:text-violet-400">
-            <NuxtIcon name="SocialTwitter" />
+            <nuxt-icon name="social/twitter" />
           </a>
           <a
             rel="noopener noreferrer"
             href="#"
             aria-label="Email"
             class="rounded-md p-2 dark:text-gray-100 hover:dark:text-violet-400">
-            <NuxtIcon name="SocialEmail" />
+            <nuxt-icon name="social/email" />
           </a>
         </div>
       </div>

@@ -1,7 +1,11 @@
-import { useSupabaseUserStore } from '~~/stores/userStore'
+// import { createPinia } from 'pinia'
+// import { useSupabaseUserStore } from '~~/stores/userStore'
 
 export default defineNuxtPlugin(async (nuxtApp) => {
-  const userStore = useSupabaseUserStore()
+  //  const pinia = createPinia()
+  //  const app = createApp(App)
+  //  app.use(pinia)
+  //   const userStore = useSupabaseUserStore()
 
   const supabase = useSupabaseClient()
   const {
@@ -9,5 +13,5 @@ export default defineNuxtPlugin(async (nuxtApp) => {
   } = await supabase.auth.getUser()
   nuxtApp.provide('supabase', supabase)
   useState('user', () => user)
-  userStore.user = user
+  // userStore.user = user
 })

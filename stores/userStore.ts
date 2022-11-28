@@ -6,13 +6,13 @@ export const useSupabaseUserStore = defineStore('userSupaStore', {
   state: () => {
     return {
       // all these properties will have their type inferred automatically
-      uid: '',
-      email: '',
-      name: '',
-      error: '',
+      uid: '' as string | undefined,
+      email: '' as string | undefined,
+      name: '' as string | undefined,
+      error: '' as string | undefined,
       confirmed: false,
       resetPasswordSent: false,
-      user: null as User,
+      user: {} as User | null,
     }
   },
 
@@ -56,8 +56,8 @@ export const useSupabaseUserStore = defineStore('userSupaStore', {
             .eq('id', user.id)
             .single()
 
-          this.uid = data.id
-          this.name = data.username
+          this.uid = data?.id
+          this.name = data?.username
           this.email = user.email
           this.error = ''
           if (user.confirmed_at) {
@@ -66,10 +66,12 @@ export const useSupabaseUserStore = defineStore('userSupaStore', {
         }
         if (error) throw error
       } catch (error) {
-        this.name = ''
-        this.email = ''
-        this.error = error.message
-        this.confirmed = false
+        if (error instanceof Error) {
+          this.name = ''
+          this.email = ''
+          this.error = error.message
+          this.confirmed = false
+        }
       }
     },
 
@@ -96,10 +98,12 @@ export const useSupabaseUserStore = defineStore('userSupaStore', {
         }
         if (error) throw error
       } catch (error) {
-        userStore.email = ''
-        userStore.name = ''
-        userStore.error = error.message
-        userStore.confirmed = false
+        if (error instanceof Error) {
+          userStore.email = ''
+          userStore.name = ''
+          userStore.error = error.message
+          userStore.confirmed = false
+        }
       }
     },
 
@@ -113,10 +117,12 @@ export const useSupabaseUserStore = defineStore('userSupaStore', {
         this.email = value.email
         if (error) throw error
       } catch (error) {
-        this.email = ''
-        this.name = ''
-        this.error = error.message
-        this.confirmed = false
+        if (error instanceof Error) {
+          this.email = ''
+          this.name = ''
+          this.error = error.message
+          this.confirmed = false
+        }
       }
     },
 
@@ -124,7 +130,7 @@ export const useSupabaseUserStore = defineStore('userSupaStore', {
       try {
         const client = useSupabaseClient()
         const { data, error } = await client.auth.resetPasswordForEmail(
-          this.email,
+          this.email!,
           {
             redirectTo: 'http://localhost:3000/resetpassword',
           },
