@@ -1,7 +1,7 @@
 <template>
   <footer class="footer footer-center bg-primary text-primary-content p-10">
     <div>
-      <NuxtIcon name="evenodd" class="text-5xl" />
+      <nuxt-icon name="evenodd" class="text-5xl" />
       <p class="font-bold">
         ACME Industries Ltd. <br />Providing reliable tech since 1992
       </p>
@@ -10,13 +10,13 @@
     <div>
       <div class="grid grid-flow-col gap-4">
         <a>
-          <NuxtIcon name="SocialTwitter" class="text-2xl" />
+          <nuxt-icon name="social/twitter" class="text-2xl" />
         </a>
         <a>
-          <NuxtIcon name="SocialYoutube" class="text-2xl" />
+          <nuxt-icon name="social/youtube" class="text-2xl" />
         </a>
         <a>
-          <NuxtIcon name="SocialFacebook" class="text-2xl" />
+          <nuxt-icon name="social/facebook" class="text-2xl" />
         </a>
       </div>
     </div>

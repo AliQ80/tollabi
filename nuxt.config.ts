@@ -66,6 +66,8 @@ export default {
     '@nuxtjs/supabase',
     '@formkit/nuxt',
     'nuxt-icons',
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
   ],
   colorMode: {
     preference: 'dark', // default value of $colorMode.preference

@@ -29,9 +29,9 @@
       'themeToggle',
     ) as HTMLInputElement | null
     if (colorMode.preference === lightTheme) {
-      themeButton.checked = true
+      themeButton!.checked = true
     } else {
-      themeButton.checked = false
+      themeButton!.checked = false
     }
   }
 
@@ -39,7 +39,7 @@
     const themeButton = document.getElementById(
       'themeToggle',
     ) as HTMLInputElement | null
-    if (themeButton.checked) {
+    if (themeButton!.checked) {
       colorMode.preference = lightTheme
     } else {
       colorMode.preference = darkTheme
@@ -100,7 +100,7 @@
               stroke-width="3"
               d="M4 6h16M4 12h8m-8 6h16" />
           </svg> -->
-            <NuxtIcon name="hamburger" class="text-xl" />
+            <nuxt-icon name="hamburger" class="text-xl" />
           </label>
           <ul
             tabindex="0"
