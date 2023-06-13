@@ -40,7 +40,7 @@ export const useSupabaseUserStore = defineStore('userSupaStore', {
     },
 
     async emailLogin(value: { email: string; password: string }) {
-      const client = useSupabaseClient()
+      const client = useSupabaseAuthClient()
       try {
         const {
           data: { user },
@@ -77,7 +77,7 @@ export const useSupabaseUserStore = defineStore('userSupaStore', {
 
     async providerLogin(provider: 'github' | 'google' | 'apple' | 'discord') {
       const userStore = useSupabaseUserStore()
-      const client = useSupabaseClient()
+      const client = useSupabaseAuthClient()
 
       try {
         const { data, error } = await client.auth.signInWithOAuth({ provider })
@@ -108,7 +108,7 @@ export const useSupabaseUserStore = defineStore('userSupaStore', {
     },
 
     async emailRegister(value: { email: string; password: string }) {
-      const client = useSupabaseClient()
+      const client = useSupabaseAuthClient()
       try {
         const { error } = await client.auth.signUp({
           email: value.email,
@@ -128,7 +128,7 @@ export const useSupabaseUserStore = defineStore('userSupaStore', {
 
     async resetPassword() {
       try {
-        const client = useSupabaseClient()
+        const client = useSupabaseAuthClient()
         const { data, error } = await client.auth.resetPasswordForEmail(
           this.email!,
           {
@@ -145,7 +145,7 @@ export const useSupabaseUserStore = defineStore('userSupaStore', {
     },
 
     async updatePassword(newPassword: string) {
-      const client = useSupabaseClient()
+      const client = useSupabaseAuthClient()
 
       try {
         const { data, error } = await client.auth.updateUser({
@@ -163,7 +163,7 @@ export const useSupabaseUserStore = defineStore('userSupaStore', {
     },
 
     async logout() {
-      const client = useSupabaseClient()
+      const client = useSupabaseAuthClient()
       await client.auth.signOut()
 
       const sbAccessCookie = useCookie('sb-access-token')

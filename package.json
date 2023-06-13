@@ -26,6 +26,7 @@
     "@commitlint/config-conventional": "^17.0.3",
     "@formkit/addons": "^1.0.0-beta.10",
     "@formkit/themes": "^1.0.0-beta.10",
+    "@nuxt/devtools": "^0.5.5",
     "@nuxtjs/color-mode": "^3.1.8",
     "@nuxtjs/eslint-config": "^12.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",

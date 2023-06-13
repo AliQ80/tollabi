@@ -3,6 +3,7 @@ export default {
   typescript: {
     shim: false,
   },
+
   build: {
     postcss: {
       postcssOptions: {
@@ -23,11 +24,12 @@ export default {
     },
     transpile: ['vue-toastification'],
   },
+
   buildModules: [
     [
       '@pinia/nuxt',
       {
-        autoImports: [
+        imports: [
           // automatically imports `usePinia()`
           'defineStore',
           // automatically imports `usePinia()` as `usePiniaStore()`
@@ -59,6 +61,7 @@ export default {
       },
     ],
   ],
+
   modules: [
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
@@ -69,6 +72,7 @@ export default {
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
   ],
+
   colorMode: {
     preference: 'dark', // default value of $colorMode.preference
     fallback: 'light', // fallback value if not system preference found
@@ -80,14 +84,19 @@ export default {
     storageKey: 'nuxt-color-mode',
     dataValue: 'theme',
   },
-  app: {
-    head: {
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    },
-  },
+
   // vite: {
   //   vue: {
   //     reactivityTransform: true,
   //   },
   // },
-}
+  app: {
+    head: {
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    },
+  },
+
+  devtools: {
+    enabled: true,
+  },
+};
