@@ -58,7 +58,7 @@
     }
   }
 
-  const handleLogin = async (value: { email: string; password: string }) => {
+  const handleLogin = async (value: any) => {
     isLoading.value = true
     await userStore.emailLogin(value)
     modalStore.authModalOff()
@@ -76,7 +76,7 @@
       <button
         aria-label="Continue with google"
         role="button"
-        class="mb-10 flex items-center rounded-lg border border-gray-700 bg-white py-3.5 px-4 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-1 lg:w-80"
+        class="mb-10 flex items-center rounded-lg border border-gray-700 bg-white px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-1 lg:w-80"
         @click="handleProviderLogin('google')">
         <div class="mx-auto flex items-center">
           <svg
@@ -155,7 +155,7 @@
       <div
         v-show="isLoading"
         class="mx-auto grid w-96 grid-cols-1 justify-items-center">
-        <progress class="progress progress-info mt-3 w-56" />
+        <progress class="progress-info progress mt-3 w-56" />
       </div>
     </div>
   </div>
