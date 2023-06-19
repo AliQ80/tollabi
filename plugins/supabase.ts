@@ -7,7 +7,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
   //  app.use(pinia)
   //   const userStore = useSupabaseUserStore()
 
-  const supabase = useSupabaseClient()
+  const supabase = useSupabaseAuthClient()
   const {
     data: { user },
   } = await supabase.auth.getUser()

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import type { User } from '@supabase/gotrue-js'
 
 export const useAuth = () => {
