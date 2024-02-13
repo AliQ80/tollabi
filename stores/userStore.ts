@@ -1,5 +1,8 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
 import { User } from '@supabase/gotrue-js'
+import { useProfileStore } from './profileStore'
+
+const profile = useProfileStore()
 
 export const useSupabaseUserStore = defineStore('userSupaStore', {
   // arrow function recommended for full type inference
@@ -172,6 +175,7 @@ export const useSupabaseUserStore = defineStore('userSupaStore', {
       const sbRefreshCookie = useCookie('sb-refresh-token')
       sbRefreshCookie.value = null
 
+      profile.$reset()
       this.$reset()
     },
   },

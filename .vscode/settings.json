@@ -34,10 +34,9 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "conventionalCommits.scopes": [
-    "supabase",
-    "pinia",
     "auth",
     "test",
-    "WIP"
+    "WIP",
+    "database"
   ]
 }
