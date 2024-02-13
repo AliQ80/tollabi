@@ -38,5 +38,18 @@
     "test",
     "WIP",
     "database"
-  ]
+  ],
+  "cSpell.words": [
+    "lofi",
+    "synthwave",
+    "tollabi",
+    "wireframe"
+  ],
+  "[css][html][javascript][json][jsonc][markdown][typescript][vue]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+      "source.fixAll.stylelint": "explicit",
+      "bracketSameLine": "explicit"
+    }
+  }
 }

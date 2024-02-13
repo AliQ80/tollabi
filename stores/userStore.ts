@@ -1,10 +1,10 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
-import { User } from '@supabase/gotrue-js'
+import type { User } from '@supabase/gotrue-js'
 import { useProfileStore } from './profileStore'
 
 const profile = useProfileStore()
 
-export const useSupabaseUserStore = defineStore('userSupaStore', {
+export const useSupabaseUserStore = defineStore('userSupabaseStore', {
   // arrow function recommended for full type inference
   state: () => {
     return {
