@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  import { useSupabaseUserStore } from '~~/stores/userStore'
-  import { useModalStore } from '@/stores/modalStore'
-  import { useProfileStore } from '~~/stores/profileStore'
+  import { useSupabaseUserStore } from '../stores/userStore'
+  import { useModalStore } from '../stores/modalStore'
+  import { useProfileStore } from '../stores/profileStore'
 
   const colorMode = useColorMode()
 
@@ -104,7 +104,7 @@
           </label>
           <ul
             tabindex="0"
-            class="menu menu-compact dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow">
+            class="menu-compact menu dropdown-content rounded-box mt-3 w-52 bg-base-100 p-2 shadow">
             <li>
               <NuxtLink to="/about"> About </NuxtLink>
             </li>
@@ -174,49 +174,50 @@
       <div class="navbar-end">
         <!-- Avatar placeholder -->
         <div v-if="userStore.getConfirmed">
-          <transition>
-            <div class="dropdown dropdown-end mx-4">
-              <label tabindex="0" class="btn btn-ghost btn-circle">
-                <div class="avatar online placeholder">
-                  <div
-                    v-if="!profileStore.avatarPath"
-                    class="bg-neutral-focus text-neutral-content ring-primary ring-offset-base-100 w-10 rounded-full ring ring-offset-2">
-                    <span class="text-xl">{{ profileStore.getInitials }}</span>
-                  </div>
-                  <div v-else>
-                    <img
-                      class="bg-neutral-focus text-neutral-content ring-primary ring-offset-base-100 w-5 rounded-full ring ring-offset-2"
-                      :src="avatar"
-                      alt="avatar" />
-                  </div>
+          // TODO: add transition
+          <!-- <transition> -->
+          <div class="dropdown dropdown-end mx-4">
+            <label tabindex="0" class="btn btn-circle btn-ghost">
+              <div class="avatar placeholder online">
+                <div
+                  v-if="!profileStore.avatarPath"
+                  class="w-10 rounded-full bg-neutral-focus text-neutral-content ring ring-primary ring-offset-2 ring-offset-base-100">
+                  <span class="text-xl">{{ profileStore.getInitials }}</span>
                 </div>
-              </label>
-              <ul
-                tabindex="0"
-                class="menu menu-compact dropdown-content bg-base-200 rounded-box mt-3 w-52 p-2 shadow">
-                <li class="border-b-2 border-indigo-500">
-                  <div v-if="userStore.getConfirmed">
-                    {{ userStore.name }}
-                    <br />
-                    {{ userStore.email }}
-                  </div>
-                </li>
-                <li>
-                  <NuxtLink to="/profile"> 🔘 Profile </NuxtLink>
-                </li>
-                <li>
-                  <NuxtLink to="/settings"> 🔘 Settings </NuxtLink>
-                </li>
-                <li class="border-t-2 border-indigo-500">
-                  <NuxtLink
-                    class="btn btn-secondary btn-sm mx-auto my-2 h-10 w-32 text-white"
-                    @click="handleLogout">
-                    Log Out
-                  </NuxtLink>
-                </li>
-              </ul>
-            </div>
-          </transition>
+                <div v-else>
+                  <img
+                    class="w-5 rounded-full bg-neutral-focus text-neutral-content ring ring-primary ring-offset-2 ring-offset-base-100"
+                    :src="avatar"
+                    alt="avatar" />
+                </div>
+              </div>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu-compact menu dropdown-content rounded-box mt-3 w-52 bg-base-200 p-2 shadow">
+              <li class="border-b-2 border-indigo-500">
+                <div v-if="userStore.getConfirmed">
+                  {{ userStore.name }}
+                  <br />
+                  {{ userStore.email }}
+                </div>
+              </li>
+              <li>
+                <NuxtLink to="/profile"> 🔘 Profile </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/settings"> 🔘 Settings </NuxtLink>
+              </li>
+              <li class="border-t-2 border-indigo-500">
+                <NuxtLink
+                  class="btn btn-secondary btn-sm mx-auto my-2 h-10 w-32 text-white"
+                  @click="handleLogout">
+                  Log Out
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
+          <!-- </transition> -->
         </div>
 
         <!-- main sidebar -->
@@ -243,7 +244,7 @@
             <NuxtLink
               to="#"
               for="modal-login"
-              class="btn btn-sm btn-circle absolute right-2 top-2"
+              class="btn btn-circle btn-sm absolute right-2 top-2"
               @click="modalStore.authModalOff()">
               ✕
             </NuxtLink>
@@ -257,7 +258,7 @@
 
     <div v-if="userStore.uid" class="flex">
       <div class="flex-non">
-        <ul class="menu bg-base-200 box h-full w-36 p-2">
+        <ul class="box menu h-full w-36 bg-base-200 p-2">
           <li>
             <a>
               <svg
